@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrDigialDiary</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Iconify Icon -->
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        .navbar-nav li {
+            margin: 5px;
+        }
+
+        .icon {
+            margin: 5px 8px;
+        }
+
+        .icon a {
+            color: rgb(121, 34, 179);
+        }
+
+        .icon a:hover {
+            color: rgb(154, 91, 196);
+        }
+
+        .nav-item a:hover,
+        .nav-item:hover {
+            color: rgb(106, 30, 157) !important;
+        }
+
+        .bgcolor {
+            background-color: rgb(121, 34, 179);
+        }
+
+        .inputbox input:focus {
+            outline: none;
+            border: none !important;
+            box-shadow: none;
+        }
+
+        .fit-content {
+            width: fit-content;
+        }
+
+        .cross {
+            top: 20%;
+            color: rgb(127, 7, 7);
+        }
+
+        .cross:hover {
+            color: rgb(151, 24, 24);
+            cursor: pointer;
+        }
+
+        .joiningbtn {
+            height: 280px;
+            background-image: linear-gradient(to bottom right, rgb(174, 84, 231), rgb(142, 59, 202));
+        }
+
+        .joiningsub:hover {
+            background-color: rgb(132, 40, 189);
+            box-shadow: 0px 0px 10px rgb(200, 108, 231);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .abouttitle {
+            rotate: -90deg;
+            width: fit-content;
+            top: 48%;
+            left: -35px;
+        }
+
+        #logo {
+            width: 480px;
+        }
+
+        .w-fit {
+            width: fit-content;
+        }
+
+        .detail {
+            font-size: large;
+        }
+
+        .learnbtn:hover {
+            background-color: rgb(85, 5, 136);
+        }
+
+        .whatwedo {
+            background-image: linear-gradient(to bottom right, rgb(174, 84, 231), rgb(142, 59, 202));
+        }
+
+        .whatwedotitle {
+            top: 45%;
+            left: -90px;
+            rotate: -90deg;
+        }
+
+        .blogtitle {
+            color: rgb(85, 5, 136);
+        }
+
+        .blogimg {
+            width: 600px;
+            height: 600px;
+            box-shadow: 0px 0px 20px rgb(150, 150, 150);
+        }
+
+        .datetime{
+            letter-spacing: 0.2rem;
+        }
+        .blogbtn{
+            border: 1px solid rgb(85, 5, 136);
+            color: rgb(85, 5, 136);
+        }
+        .blogbtn:hover{
+            background-color: rgb(122, 63, 159);
+            color: white;
+        }
+        .size{
+            width: 100%;
+        }
+        .size1{
+            width: 100%;
+        }
+        .imgofblog{
+            width: fit-content;
+            transition: all 0.3s ease;
+
+        }
+        .imgofblog:hover{
+            opacity: 0.8;
+        }
+        .bgimg{
+            background-image: url(the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg);
+            height: 100px;
+            margin: 50px;
+            background-position: bottom;
+            cursor:pointer;
+            transition: all 0.3s ease;
+        }
+        .bgimg:hover{
+            opacity: 0.8;
+        }
+        .titleofblog{
+            background-color: rgba(0, 0, 0, 0.159);
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class=" d-flex align-items-center justify-content-between w-100">
+                    <a class="navbar-brand fs-4" href="#">MrDigitalDiary</a>
+
+                    <ul class="navbar-nav fs-6 d-flex align-items-center fw-semibold text-uppercase">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Article</a>
+                        </li>
+                        <li class="nav-item cursor-pointer fs-5 searchicon">
+                            <iconify-icon icon="fluent:search-12-filled"></iconify-icon>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav fs-4">
+                        <div class="icon"><a href=""><iconify-icon icon="lucide:instagram"></iconify-icon></a></div>
+                        <div class="icon"><a href=""><iconify-icon icon="bi:twitter"></iconify-icon></a></div>
+                        <div class="icon"><a href=""><iconify-icon icon="devicon-plain:facebook"></iconify-icon></a>
+                        </div>
+                        <div class="icon"><a href=""><iconify-icon icon="fa:youtube"></iconify-icon></a></div>
+                        <div class="icon"><a href=""><iconify-icon icon="mage:pinterest"></iconify-icon></a></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container searchbox p-3 border border-black bgcolor position-relative">
+        <div class="inputbox d-flex justify-content-center border border-black w-100 rounded bg-white">
+            <input type="text" name="search" id="search" class="w-100 p-2 border border-0 rounded ps-3"
+                placeholder="Search Topic Here...">
+            <div class="submit fs-5 p-2 pe-3" type="submit">
+                <iconify-icon icon="fluent:search-12-filled"></iconify-icon>
+            </div>
+        </div>
+        <div class="cross fs-3 position-absolute start-100">
+            <iconify-icon icon="entypo:cross"></iconify-icon>
+        </div>
+    </div>
+
+    <div class="joiningbtn container-fluid my-3 d-flex justify-content-center align-items-center">
+        <a href=""><span class="joiningsub text-white border border-white p-3 rounded cursor-pointer">BECOME A MEMEBER
+                OF OUR COMMUNITY</span></a>
+    </div>
+
+    <div class="container position-relative my-4">
+        <div class="abouttitle fs-5 position-absolute fw-bold">ABOUT US</div>
+        <div class="details d-flex">
+            <div class="imgcont ms-3">
+                <img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" id="logo">
+            </div>
+            <div class="aboutdet d-flex flex-column justify-content-between ms-5">
+                <div class="aboutitle fw-bold fs-2">Hey, MrDigialDiary Here!</div>
+                <div class="detail w-75 my-2 me-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+                    nulla expedita
+                    modi quisquam dicta eveniet eos porro perferendis recusandae aliquam? Natus a nesciunt soluta
+                    commodi qui et consectetur deserunt accusamus.
+                    Nihil molestias, pariatur porro ipsum enim, voluptatem alias esse cum quia nulla est eum amet quam
+                    aliquid sapiente sed exercitationem quas iste dicta, suscipit error sint. Harum distinctio fugit
+                    itaque!Natus impedit numquam quidem quasi sed ab corporis nisi obcaecati repellendus nulla
+                    exercitationem
+                    earum veritatis qui at beatae corrupti, in einventore Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Error saepe nisi cumque debitis, totam explicabo, quaerat voluptatem
+                    odit maxime molestias facilis? Ut eius, nulla repellat aliquid quae assumenda quis sequi.
+                    consequuntur rem? Praesentium nobis commodi deserunt fugiat perferendis?</div>
+                <div class="learnbtn bgcolor text-white w-fit p-2 rounded fs-5 cursor-pointer mb-2">Learn More!</div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="whatwedo container-fluid my-3 fs-4 text-white p-5">
+        <div
+            class="container position-relative text-center d-flex flex-column justify-content-center align-items-center py-4">
+            <div class="whatwedotitle fs-5 position-absolute fw-bold">SHORT DESCRIPTION</div>
+            <div class="title">What We Do?</div>
+            <div class="description fs-5 w-75 py-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
+                dolorum repudiandae
+                rerum expedita tempora voluptas facere magnam, aut dolore perferendis saepe, dignissimos cumque cum quo
+                reprehenderit quaerat, praesentium molestiae nemo. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Perferendis autem eum, eius blanditiis nam laudantium ea voluptas eligendi odit veniam delectus
+                quia in voluptates culpa, possimus consequuntur quod quaerat mollitia?</div>
+        </div>
+    </div>
+
+    <div class="container-fluid position-relative">
+        <div class="blogtitle fw-bold d-flex"><iconify-icon icon="simple-icons:microdotblog" class="fs-1"></iconify-icon>
+            <div class="name fs-2 ms-2">BLOGS</div>
+        </div>
+        <div class="blogcard py-3 d-flex">
+            <div class="cardimage rounded-circle w-fit">
+                <img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="blogimg rounded">
+            </div>
+            <div class="detailsofblog ms-4">
+                <a href="">
+                    <div class="titleblog fs-2 text-decoration-underline">Name Of The Blog uploaded</div>
+                </a>
+                <div class="datetime fs-5 my-3 fw-bold">21.10.2024 CATEGORY</div>
+                <div class="blogdet fs-4 my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium quis ut
+                    numquam recusandae quas tempora rem a, laboriosam ipsa eum inventore consequatur repellendus,
+                    voluptatum corporis aliquid perspiciatis! Quasi, nostrum aspernatur.</div>
+                <div class="blogbtn w-fit p-2 rounded fs-5 cursor-pointer mb-2">Learn More!</div>    
+            </div>
+        </div>
+        <div class="blogcard py-3 d-flex">
+            <div class="cardimage rounded-circle w-fit">
+                <img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="blogimg rounded">
+            </div>
+            <div class="detailsofblog ms-4">
+                <a href=""> 
+                    <div class="titleblog fs-2 text-decoration-underline">Name Of The Blog uploaded</div>
+                </a>
+                <div class="datetime fs-5 my-3 fw-bold">21.10.2024 CATEGORY</div>
+                <div class="blogdet fs-4 my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium quis ut
+                    numquam recusandae quas tempora rem a, laboriosam ipsa eum inventore consequatur repellendus,
+                    voluptatum corporis aliquid perspiciatis! Quasi, nostrum aspernatur.</div>
+                <div class="blogbtn w-fit p-2 rounded fs-5 cursor-pointer mb-2">Learn More!</div>    
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="cardimgofblog position-relative col-4">
+                <div class="imgofblog"><img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="size rounded"></div>
+                <div class="titleofblog position-absolute top-0 text-white p-2 fs-4">Titleofblog</div>
+            </div>
+            <div class="col-8 ">
+                <div class="row">
+                    <div class="cardimgofblog position-relative col-4">
+                        <div class="imgofblog"><img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="size1 rounded"></div>
+                        <div class="titleofblog position-absolute top-0 text-white p-2 fs-4">Titleofblog</div>
+                    </div>
+                    <div class="cardimgofblog position-relative col-4">
+                        <div class="imgofblog"><img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="size1 rounded"></div>
+                        <div class="titleofblog position-absolute top-0 text-white p-2 fs-4">Titleofblog</div>
+                    </div>
+                    <div class="cardimgofblog position-relative col-4">
+                        <div class="imgofblog"><img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="size1 rounded"></div>
+                        <div class="titleofblog position-absolute top-0 text-white p-2 fs-4">Titleofblog</div>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center gx-2 hover">
+                    <div class="col-12 text-center text-white bgimg rounded d-flex align-items-center justify-content-center fs-4"><div class="content p-2">SEE MORE</div> <iconify-icon icon="gg:arrow-up-o" class="iconarrow fs-2" style="rotate: 90deg;"></iconify-icon></div>
+                </div>
+               
+            </div>
+            
+        </div>
+        
+
+    </div>
+
+
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $(".searchbox").hide();
+            $(".searchicon").click(function () {
+                $(".searchbox").fadeIn();
+                $(".searchicon").hide();
+            });
+
+            $(".cross").click(function () {
+                $(".searchbox").hide();
+                $(".searchicon").show();
+            });
+        });
+    </script>
+</body>
+
+</html>
