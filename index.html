@@ -17,6 +17,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <style>
+        body {
+            line-height: 1.6; /* Improves readability */
+        }
+
         .cursor-pointer {
             cursor: pointer;
         }
@@ -143,7 +147,7 @@
         .imgofblog{
             width: fit-content;
             transition: all 0.3s ease;
-
+            cursor: pointer;
         }
         .imgofblog:hover{
             opacity: 0.8;
@@ -163,6 +167,31 @@
             background-color: rgba(0, 0, 0, 0.159);
             border-top-left-radius: 10px;
             border-bottom-right-radius: 10px;
+        }
+        .bggrey{
+            padding-top: 20px;
+            box-shadow: 0px 0px 10px grey;
+        }
+        .imgcard{
+            width: 150px;
+            height: 150px;
+        }
+        .bgcolorwhite{
+            background-image: linear-gradient(to bottom right, rgb(174, 84, 231), rgb(142, 59, 202));
+        }
+        .categoryimg{
+            box-shadow: 0px 0px 20px white;
+        }
+        .card_cat{
+            cursor: pointer;
+            margin: 10px 0px;
+        }
+        .card_cat:hover .categoryimg{
+            opacity: 0.8;
+            box-shadow: 0px 0px 30px rgb(230, 229, 229);
+        }
+        .card_cat:hover .titlecard{
+            color: rgb(207, 204, 204);
         }
     </style>
 
@@ -303,7 +332,7 @@
         </div>
     </div>
 
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4 ">
         <div class="row">
             <div class="cardimgofblog position-relative col-4">
                 <div class="imgofblog"><img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="size rounded"></div>
@@ -321,19 +350,40 @@
                     </div>
                     <div class="cardimgofblog position-relative col-4">
                         <div class="imgofblog"><img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="size1 rounded"></div>
-                        <div class="titleofblog position-absolute top-0 text-white p-2 fs-"5>Titleofblog</div>
+                        <div class="titleofblog position-absolute top-0 text-white p-2 fs-5">Titleofblog</div>
                     </div>
                 </div>
                 <div class="row justify-content-md-center gx-2 hover">
                     <div class="col-12 text-center text-white bgimg rounded d-flex align-items-center justify-content-center fs-4"><div class="content p-2">SEE MORE</div> <iconify-icon icon="gg:arrow-up-o" class="iconarrow fs-2" style="rotate: 90deg;"></iconify-icon></div>
                 </div>
-               
-            </div>
-            
+            </div>        
         </div>
-        
-
     </div>
+
+    <div class="container-fluid bgcolorwhite py-4">
+        <div class="category container position-relative py-4  text-white">
+            <div class="abouttitle fs-5 position-absolute fw-bold">CATEGORIES</div>
+            <div class="row d-flex flex-wrap align-items-center justify-content-around m-4">
+                <div class="card_cat w-fit col-4 col-lg-6">
+                    <div class="imgcard"><img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="categoryimg w-100 rounded-circle"></div>
+                    <div class="titlecard text-center fs-5">Category1</div>
+                </div>
+                <div class="card_cat w-fit col-4 col-lg-6">
+                    <div class="imgcard"><img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="categoryimg w-100 rounded-circle"></div>
+                    <div class="titlecard text-center fs-5">Category2</div>
+                </div>
+                <div class="card_cat w-fit col-4 col-lg-6">
+                    <div class="imgcard"><img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="categoryimg w-100 rounded-circle"></div>
+                    <div class="titlecard text-center fs-5">Category3</div>
+                </div>
+                <div class="card_cat w-fit col-4 col-lg-6">
+                    <div class="imgcard"><img src="the-power-of-gratitude-cultivating-joy-in-everyday-life.jpeg" alt="" class="categoryimg w-100 rounded-circle"></div>
+                    <div class="titlecard text-center fs-5">Category4</div>
+                </div>
+            </div>        
+        </div>
+    </div>
+
 
 
     
