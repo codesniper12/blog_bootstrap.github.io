@@ -193,13 +193,35 @@
         .card_cat:hover .titlecard{
             color: rgb(207, 204, 204);
         }
+        .newsletter{
+            background-color: rgb(214, 130, 240);
+        }
+        .input{
+            width: 350px;
+            border: none;
+        }
+        .form input:focus{
+            border:2px solid rgba(128, 0, 128, 0.675) !important;
+            outline: none;
+        }
+        .input{
+            background-color: rgba(219, 182, 231, 0.486);
+        }
+        .submit{
+            outline: none;
+            border: none;
+            transition: all 0.3s ease-in;
+        }
+        .submit:hover{
+            background-color: rgb(157, 41, 211);
+        }
     </style>
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-2">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -383,6 +405,29 @@
             </div>        
         </div>
     </div>
+    <div class="container-fluid newsletter p-5">
+        <div class="container">
+            <div class="titlenews fw-bold">Subscribe To Our Newsletter!</div>
+            <!-- <div class="titleeasy">What You will provide</div> -->
+            <form action="newsletter.php" method="post" class="form bg-white p-5 w-fit px-8 my-4 rounded">
+                <div class="inputtext my-2">
+                    <input type="text" name="" id="" class="input p-2" placeholder="Name">
+                </div>
+                <div class="inputemail my-2">
+                    <input type="email" name="" id="" class="input p-2 mt-2" placeholder="Email">
+                </div>
+                <div class="submitnews my-2">
+                    <input type="submit" value="Subscribe" class="submit p-2 px-4 mt-3 fw-bold text-white bgcolor rounded">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
 
 
 
