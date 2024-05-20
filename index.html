@@ -17,6 +17,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <style>
+        *{
+            list-style: none;
+        }
         body {
             line-height: 1.6; /* Improves readability */
         }
@@ -33,12 +36,13 @@
             margin: 5px 8px;
         }
 
-        .icon a {
+        .icon a,.iconf a {
             color: rgb(121, 34, 179);
         }
 
-        .icon a:hover {
+        .icon a:hover,.iconf:hover,.iconf:hover a {
             color: rgb(154, 91, 196);
+            cursor: pointer;
         }
 
         .nav-item a:hover,
@@ -214,6 +218,28 @@
         }
         .submit:hover{
             background-color: rgb(157, 41, 211);
+        }
+        .text-small{
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: rgb(60, 60, 60);
+        }
+        .imgrotate{
+            width: 200px;
+            height: 200px;
+        }
+        .f-big{
+            font-size: 60px;
+        }
+        footer .contact a,footer li a{
+            color: black;
+        }
+        footer li a:hover{
+            color: rgb(60, 60, 60);
+        }
+        footer .contact a:hover{
+            color: blue;
         }
     </style>
 
@@ -407,25 +433,72 @@
     </div>
     <div class="container-fluid newsletter p-5">
         <div class="container">
-            <div class="titlenews fw-bold">Subscribe To Our Newsletter!</div>
-            <!-- <div class="titleeasy">What You will provide</div> -->
-            <form action="newsletter.php" method="post" class="form bg-white p-5 w-fit px-8 my-4 rounded">
-                <div class="inputtext my-2">
-                    <input type="text" name="" id="" class="input p-2" placeholder="Name">
+            <div class="row row-cols-2 justify-content-between">
+                <div class="w-fit col">
+                    <div class="titlenews fw-bold">Subscribe To Our Newsletter!</div>
+                    <div class="titleeasy text-small">What You will provide</div>
+                    <form action="newsletter.php" method="post" class="form bg-white p-5 w-fit px-8 my-4 rounded">
+                        <div class="inputtext my-2">
+                            <input type="text" name="" id="" class="input p-2" placeholder="Name">
+                        </div>
+                        <div class="inputemail my-2">
+                            <input type="email" name="" id="" class="input p-2 mt-2" placeholder="Email">
+                        </div>
+                        <div class="submitnews my-2">
+                            <input type="submit" value="Subscribe" class="submit p-2 px-4 mt-3 fw-bold text-white bgcolor rounded">
+                        </div>
+                    </form>
                 </div>
-                <div class="inputemail my-2">
-                    <input type="email" name="" id="" class="input p-2 mt-2" placeholder="Email">
-                </div>
-                <div class="submitnews my-2">
-                    <input type="submit" value="Subscribe" class="submit p-2 px-4 mt-3 fw-bold text-white bgcolor rounded">
-                </div>
-            </form>
+                <!-- <div class="benifits ps-5">
+                    <div class="benifit_title fw-bold fs-4 my-2">Benifits Of Joining Newsletter</div>
+                    <div class="benifit my-2">
+                        <div class="iconbenifit d-flex align-items-center fs-5"><iconify-icon icon="tabler:target-arrow" class="mx-2 fs-4"></iconify-icon><div class="detailstext">Benifit of subscribing to newsletter</div></div>
+                    </div>
+                    <div class="benifit my-2">
+                        <div class="iconbenifit d-flex align-items-center fs-5"><iconify-icon icon="tabler:target-arrow" class="mx-2 fs-4"></iconify-icon><div class="detailstext">Benifit of subscribing to newsletter</div></div>
+                    </div>
+                    <div class="benifit my-2">
+                        <div class="iconbenifit d-flex align-items-center fs-5"><iconify-icon icon="tabler:target-arrow" class="mx-2 fs-4"></iconify-icon><div class="detailstext">Benifit of subscribing to newsletter</div></div>
+                    </div>
+                    <div class="benifit my-2">
+                        <div class="iconbenifit d-flex align-items-center fs-5"><iconify-icon icon="tabler:target-arrow" class="mx-2 fs-4"></iconify-icon><div class="detailstext">Benifit of subscribing to newsletter</div></div>
+                    </div>
+                    <div class="benifit my-2">
+                        <div class="iconbenifit d-flex align-items-center fs-5"><iconify-icon icon="tabler:target-arrow" class="mx-2 fs-4"></iconify-icon><div class="detailstext">Benifit of subscribing to newsletter</div></div>
+                    </div>
+                </div> -->
+            </div>            
         </div>
+        
 
     </div>
     <footer>
-        <div class="container">
-
+        <div class="container-fluid d-flex align-items-start justify-content-start p-4">
+            <div class="Organizationame">MrDigitalDiary</div>
+            <div class="elements text-black mx-5">
+                <ul class="d-flex flex-column justify-content-between">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="socialsfooter mx-5">
+                <div class="iconf  d-flex align-items-center "><a href=""><iconify-icon icon="lucide:instagram" class="mt-2 me-1"></iconify-icon></a><div class="text">Instagram</div></div>
+                <div class="iconf d-flex align-items-center"><a href=""><iconify-icon icon="bi:twitter" class="mt-2 me-1"></iconify-icon></a><div class="text">Twitter</div></div>
+                <div class="iconf d-flex align-items-center"><a href=""><iconify-icon icon="devicon-plain:facebook" class="mt-2 me-1"></iconify-icon></a><div class="text">FaceBook</div>
+                </div>
+                <div class="iconf d-flex align-items-center"><a href=""><iconify-icon icon="fa:youtube" class="mt-2 me-1"></iconify-icon></a><div class="text">Youtube</div></div>
+                <div class="iconf d-flex align-items-center"><a href=""><iconify-icon icon="mage:pinterest" class="mt-2 me-1"></iconify-icon></a><div class="text">Pinterest</div></div>
+            </div>
+            <div class="contact">
+                <div class="title">Contact</div>
+                <li><a href="mailto:" class="text-decoration-underline">MrDigitalDiary@gmail.com</a></li>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid text-center fs-6 p-2 pb-4 fst-italic">
+            © MrDigitalDiary. All rights reserved. Design and development By <a href="mailto:">Rohit K. Kumhar</a>
         </div>
     </footer>
 
